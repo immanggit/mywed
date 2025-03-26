@@ -46,16 +46,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NPGJWXK');</script>
-<!-- End Google Tag Manager -->
-
-
 <meta name="csrf-token" content="BjTxb7fqObvsqtypJCNXjNM9C1WFwP7j2Gr1fWLm">
 
 <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
@@ -70,7 +60,7 @@
 
 
 <script src="https://www.youtube.com/iframe_api"></script>
-
+<script src="https://cdn.tailwindcss.com"></script>
 
 
 
@@ -162,6 +152,20 @@ var context = new AudioContext();
         body {
                             font-family: "Poppins",sans-serif;
                     }
+
+.dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .active-dot {
+            background-color: #717171;
+        }
 
 
         .header1-story {
@@ -743,17 +747,6 @@ var context = new AudioContext();
     <!-- END MODAL BANTU BAYAR -->
     <div id="fun-div-id1" class="mob-con">
         <div class="overlay-tutor-realtime" id="overlay-tutor-realtime"></div>
-<div id="kucing_imut" style="display: table; height: 100vh;background-color: #fffffff2;position: fixed;z-index: 99999999;width: 100vw;">
-    <div class="middle" style="display: table-cell; vertical-align: middle;">
-        <div class="inner" style="margin-left: auto;margin-right: auto;width: 400px; text-align: center">
-                            <img style="margin: 0 auto;" src="https://indoinvite.com/nikah/loading_new.gif" alt="">
-                <div style="height: 50px"></div>
-                
-                                    <p style="font-size: 12px; color:#000; padding: 0px 40px; margin-top: -50px; line-height: 14px;">Untuk tampilan terbaik gunakan Google Chrome dan matikan mode gelap</p>
-            
-        </div>
-    </div>
-</div>
 
 <div id="template-ucapan-all"></div>
 
@@ -1662,258 +1655,6 @@ var context = new AudioContext();
 
 </div>
 
-<div id="kehadiran-modal" style=" max-width: 440px; display: none; width: 100%;position: fixed;background-color: #0000008f;z-index: 9999;height: 100%; color: #000; font-family: 'Golos Text', sans-serif;">
-
-
-<div id="kado-frame" style="color: #000 !important">
-
-
-
-
-    
-    <div id="kado-pilih" style="">
-    <div onclick="closeKehadrianModal()" style="height: 50%;position: absolute;top: 0;width: 100%;"></div>
-    <div id="kehadiran-modal-body" style="transform: translateY(400px); opacity: 0; width: 100%;background-color: #fff !important;position: absolute;bottom: 0px;height: 50%;border-top-left-radius: 10px;border-top-right-radius: 10px; padding: 10px 15px;">
-
-
-            <div id="header_kd" class="header_rmodal" style="height: 30px;">
-                <p id="header_kd_id1" style="font-size: 12px !important; font-family: 'Golos Text', sans-serif;">Konfirmasikan kehadiran Anda kepada pemilik acara</p>
-            </div>
-            <hr>
-            <div style="overflow-y: scroll; height: 100%;">
-                <div style="height: 10px"></div>
-                <div style="text-align:center; margin-bottom: 15px;">
-
-                                        <p id="kehadiaran-popup-id1" style="font-size: 12px !important;font-family: 'Golos Text', sans-serif !important;line-height: 14px !important;">Pemilik acara mengharapkan konfirmasi kehadiranmu di acara The Wedding Of</p>
-                        <p id="kehadiaran-popup-id2" style="font-size: 12px !important;font-family: 'Golos Text', sans-serif !important;line-height: 14px !important;">Immang & Islah</p>
-                                    </div>
-
-
-                
-                <form style="    width: 95%;margin: 0 auto;" id="push_ucapan_popup" method="POST" action="https://indoinvite.com/ucapan/store">
-                    <input type="hidden" name="_token" value="BjTxb7fqObvsqtypJCNXjNM9C1WFwP7j2Gr1fWLm">                    <input style="    font-size: 12px !important;" type="hidden" name="pernikahan_id" value="812669">
-                    <div class="form-group col-md-12" style="background-color: #fff">
-                        <label style="color: #000 !important" class="form-label">Nama</label>
-                        <input style="   color: #000 !important;  font-size: 12px !important;padding: 0px 10px !important;height: 35px !important;" maxlength="20" required name="nama" id="konfir_nama_2_popup" class="form-control form-fun">
-                    </div>
-
-                    <div class="form-group col-md-12" id="filed_kehadiran_popup" style="background-color: #fff">
-                        <label style="color: #000 !important" class="form-label">Kehadiran</label>
-
-                        <select style="  color: #000 !important;  font-size: 12px !important;padding: 0px 10px !important;height: 35px !important;" required class="form-control form-fun" name="ket_hadir" id="hadir_id_popup">
-                            
-                            <option value="">Option</option>
-                            <option value="0">Tidak Hadir</option>
-                            <option value="1">Hadir</option>
-                        </select>
-                    </div>
-
-
-                    <div class="form-group col-md-12" style="background-color: #fff; display:none" id="wa3_popup">
-                        <label style="color: #000 !important" class="form-label">Jumlah Orang yang Hadir</label>
-
-                        <select style="  color: #000 !important  font-size: 12px !important;padding: 0px 10px !important;height: 35px !important;" required class="form-control form-fun" name="jumlah" id="jumlah_datang_id_popup">
-                            
-                                                                                                <option value="0">0 Orang</option>
-                                                                    <option value="1">1 Orang</option>
-                                                                    <option value="2">2 Orang</option>
-                                                                    <option value="3">3 Orang</option>
-                                                                    <option value="4">4 Orang</option>
-                                                                    <option value="5">5 Orang</option>
-                                                                    <option value="6">6 Orang</option>
-                                                                    <option value="7">7 Orang</option>
-                                                                    <option value="8">8 Orang</option>
-                                                                    <option value="9">9 Orang</option>
-                                                                    <option value="10">10 Orang</option>
-                                                                                    </select>
-                    </div>
-
-                    
-
-                    <div style="display: flex;     width: 100%;">
-                        <button type="submit" id="tombol_kirim_2_popup" style=" padding: 10px 30px;border-radius: 6px; width: 100%" class="btn btn-primary font-p">Send</button>
-                                                <div style="width: 150px;cursor: pointer;padding-top: 8px;border: 1px solid #000;border-radius: 8px;height: 43px;" onclick="openGiftModal()">
-                            <svg id="tt-gift" style="color: #242424 !important; margin: 0 auto;" class="w-10 h-10 text-gray-800 dark:text-white box-shadow-new" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
-                            </svg>
-                        </div>
-                        
-                    </div>
-
-                        <p  id="footer_kd_id1" style="font-size: 10px; text-align: center; margin-top: 5px;line-height: 13px;">Dengan mengirim konfirmasi kehadiran, Pemilik Acara dapat mengetahui status kehadiran masing-masing tamu</p>
-                </form>
-
-
-
-
-                <div style="height: 70px"></div>
-            </div>
-
-
-
-            
-
-    </div>
-
-
-</div>
-
-
-
-
-
-    
-    <div id="kado-konfir" style="display:none">
-        <div onclick="closeKadoModal()" style="height: 30%;position: absolute;top: 0;width: 100%;">
-        </div>
-        <div style="width: 100%;background-color: #fff !important;position: absolute;bottom: 0px;height: 70%;border-top-left-radius: 10px;border-top-right-radius: 10px; padding: 10px 15px;">
-
-
-                        <div style="height: 30px;">
-                            <p id="header_kd_kembali" style="font-size: 12px; font-family: 'Golos Text', sans-serif;">< Kembali</p>
-                        </div>
-                        <hr>
-
-
-                        <div style="overflow-y: scroll; height: 100%;">
-                            
-                                <input type="hidden" name="_token" value="BjTxb7fqObvsqtypJCNXjNM9C1WFwP7j2Gr1fWLm">                            <div style="height: 10px"></div>
-
-                            <div class="form-group col-md-12">
-                                <label style="font-family: 'Golos Text', sans-serif; font-size: 10px">Nama Pengirim</label><br>
-                                <input required name="nama_pengirim" class="form-control-kado" value="" placeholder="">
-                            </div>
-
-                            <div class="form-group col-md-12" style="margin-top: -10px; margin-bottom: -3px;">
-                                <label style="font-family: 'Golos Text', sans-serif; font-size: 10px"><input style="float: left; width: auto; margin-top: -9px; margin-right: 5px;" type="checkbox" name="anonim" class="form-control-kado" value="" placeholder="">Sembunyikan nama pengirim</label>
-                            </div>
-
-                            <div class="form-group col-md-12">
-                                <label style="font-family: 'Golos Text', sans-serif; font-size: 10px">Nomor Whatsapp Pengirim (Untuk Notifikasi Tracking Kado)</label><br>
-                                <input type="number" required name="no_wa_pengirim" class="form-control-kado" value="" placeholder="087888222444">
-                            </div>
-
-                            <div class="form-group col-md-12">
-                                <label style="font-family: 'Golos Text', sans-serif; font-size: 10px">Ucapan di Kado (Detailkan jika ada request khusus)</label><br>
-                                <textarea name="ucapan_pengirim" class="form-control-kado" style="height: 60px" value=""></textarea>
-                            </div>
-
-                            <div class="form-group col-md-12" style="margin-top: -10px; margin-bottom: -3px;">
-                                <label style="font-family: 'Golos Text', sans-serif; font-size: 10px"><input style="float: left; width: auto; margin-top: -9px; margin-right: 5px;" type="checkbox" required checked name="" class="form-control-kado" value="" placeholder="">Saya menyetujui <a href="https://indoinvite.com/artikel/kebijakan-layanan-jastio" target="_blank"><u>Kebijakan Layanan</u></a>Jastio</label>
-                            </div>
-
-                            
-                            <input type="hidden" name="pernikahan_id" value="812669">
-
-                            <img style="margin: 0 auto; width: 150px" src="https://indoinvite.com/nikah/payment-support.webp" alt="">
-
-                            <div style="text-align: center; margin-top: 20px; font-family: 'Golos Text', sans-serif; font-size: 10px; margin-top: 0px;">
-                                Secured Payment by
-                                <a href="https://www.xendit.co/id/" target="_blank"><img style="width: 70px; margin: 0 auto" src="https://www.xendit.co/wp-content/uploads/2020/03/XENDIT-LOGOArtboard-1@2x.png" alt=""></a>
-                            </div>
-
-                            <p style="margin-top: 10px; font-size: 11px; font-family: 'Golos Text', sans-serif; text-align: center;font-weight: 600;">Telah Diliput Media Nasional</p>
-                            <div style="padding-top: 10px;width: 80%;margin: 0 auto;">
-                                <div style="width: 20%; float: left; margin-right: 10px;">
-                                    <a href="https://tribunnews.com/techno/2023/03/06/pandemi-covid-19-bikin-tren-undangan-digital-semakin-berkembang" rel="nofollow" target="_blank"><img src="https://indoinvite.com/nikah/tribunnews.svg" alt=""></a>
-                                </div>
-                                <div style="width: 20%; float: left; margin-right: 10px">
-                                    <a href="https://www.liputan6.com/citizen6/read/5226795/tren-undangan-online-fitur-titip-kado-bantu-kirim-hadiah-jadi-lebih-praktis " rel="nofollow" target="_blank"><img src="https://indoinvite.com/nikah/liputan6.png" alt=""></a>
-                                </div>
-                                <div style="width: 20%; float: left; margin-right: 10px">
-                                    <a href="https://www.merdeka.com/gaya/dapat-undangan-online-tapi-tak-bisa-hadir-bisa-titip-kado-lewat-indoinvite.html" rel="nofollow" target="_blank"><img src="https://indoinvite.com/nikah/merdeka.png" alt=""></a>
-                                </div>
-                                <div style="width: 20%; float: left">
-                                    <a href="https://industri.kontan.co.id/news/inovasi-undangan-online-fitur-titip-kado-bisa-memudahkan-pengiriman-hadiah" rel="nofollow" target="_blank"><img src="https://indoinvite.com/nikah/kontan.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div style="height: 10px"></div>
-
-                            <div style="text-align: center; margin-top: 20px">
-                                <p style="font-family: 'Golos Text', sans-serif; font-size: 12px; font-weight: 600;">CV. Funware Nurbadi Digital</p>
-                                <p style="font-family: 'Golos Text', sans-serif; font-size: 10px">Jl Gunung Batur, No.88X, Kubutambahan, Buleleng, Bali</p>
-                                <p style="font-family: 'Golos Text', sans-serif; font-size: 10px">Contact Admin (62)881-0380-52838</p>
-                            </div>
-
-                            <div style="height: 100px"></div>
-                        </div>
-
-
-
-
-
-                        <div style="position: absolute;bottom: 0px;width: 91%;background-color: #fff; height: 50px; padding-top: 5px; border-top: 1px solid #e8e8e8;">
-                            <div style="width: 50%; float: left; margin-top: -10px;">
-                                <span style="font-family: 'Golos Text', sans-serif; font-size: 10px">✅ Aman Kado Bisa Di Tracking ⓘ</span>
-                                <p style="font-family: 'Golos Text', sans-serif; margin-top: -7px;" class="total-kado-id">Rp.550,000</p>
-                            </div>
-                            <div style="width: 50%; float: left;">
-                                
-                            </div>
-
-                        </div>
-                    </form>
-
-
-
-
-        </div>
-
-
-    </div>
-    
-
-
-
-
-        
-        <div id="kado-xendit" style="display:none">
-            <div onclick="closeKadoModal()" style="height: 30%;position: absolute;top: 0;width: 100%;"></div>
-            <div style="width: 100%;background-color: #fff !important;position: absolute;bottom: 0px;height: 70%;border-top-left-radius: 10px;border-top-right-radius: 10px; padding: 10px 15px;">
-
-
-                <div style="height: 30px;">
-                    <p style="font-size: 12px; font-family: 'Golos Text', sans-serif; color: #000 !important">Pilih metode pembayaran, rekomendasi dengan QRIS</p>
-                </div>
-                <hr>
-                    <input type="hidden" name="_token" value="BjTxb7fqObvsqtypJCNXjNM9C1WFwP7j2Gr1fWLm">                <div style="overflow-y: scroll; height: 100%;">
-                    <div style="height: 100%" id="frame-xendit-kado"></div>
-                </div>
-                <div style="height: 100px"></div>
-
-
-
-
-
-                <div style="position: absolute;bottom: 0px;width: 91%;background-color: #fff; height: 50px; padding-top: 5px; border-top: 1px solid #e8e8e8;">
-                    <div style="width: 50%; float: left; margin-top: -10px;">
-                        <span style="font-family: 'Golos Text', sans-serif; font-size: 10px">✅ Aman Kado Bisa Di Tracking ⓘ</span>
-                        <p style="font-family: 'Golos Text', sans-serif; margin-top: -7px;" class="total-kado-id">Rp.550,000</p>
-                    </div>
-                    <div style="width: 50%; float: left;">
-                        <button id="btn-tracking-kado" onclick="lihatTracking()" style="font-family: 'Golos Text', sans-serif;background-color: #ff2f2f; color: #fff; border-radius: 2px; width: 100%; padding: 5px 0px">Loading ...</button>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-
-
-        </div>
-        
-
-
-
-
-
-</div>
-
-
-
-
-</div>
 
 
 <div id="gift-modal" style="max-width: 440px; display: none; width: 100%;position: fixed;background-color: #0000008f;z-index: 9999;height: 100%; color: #000; font-family: 'Golos Text', sans-serif;">
@@ -2689,7 +2430,7 @@ var context = new AudioContext();
                     </div>
                     <img id="bx2-fun-img-id5" data-aos="zoom-in" class=""
                         src="https://indoinvite.com/nikah/template/flowers-template/blue-flowers/BFL-Border2.png"
-                        style="position: relative; width: 315px; z-index: 1; margin: 0 auto !important; margin-top: -290px !important;"
+                        style="position: relative; width: 315px; z-index: 1; margin: 0 auto !important; margin-top: -310px !important;"
                         alt="">
                         <br>
                 </div>                
@@ -2783,7 +2524,7 @@ var context = new AudioContext();
                                     </div>
                                     <img id="bx2-fun-img-id5" data-aos="zoom-in" class=""
                                         src="https://indoinvite.com/nikah/template/flowers-template/blue-flowers/BFL-Border2.png"
-                                        style="position: relative; width: 315px; z-index: 1; margin: 0 auto !important; margin-top: -290px !important;"
+                                        style="position: relative; width: 315px; z-index: 1; margin: 0 auto !important; margin-top: -310px !important;"
                                         alt="">
                                     <br>
                                 </div>
@@ -2843,7 +2584,6 @@ var context = new AudioContext();
                                           <p class="fun-p-191">Anak Kelima dari Pasangan</p>
       <p class="fun-p-192">(alm) Bripka Mustaring Alwi &amp;</p>
       <p class="fun-p-193">Ibu Nursiah</p>
-      <p class="fun-p-194">Beralamat di Jl. Puyu Kel. Caile</p>
                                         </div>
                                                                             </div>
 
@@ -2863,7 +2603,6 @@ var context = new AudioContext();
                                           <p class="fun-p-203">Anak Pertama dari Pasangan</p>
       <p class="fun-p-204">Bapak Kaharuddin &amp;</p>
       <p class="fun-p-205">Ibu Rosmi</p>
-      <p class="fun-p-206">Beralamat di Lorong Bettu, Desa Dampang</p>
                                         </div>
                                                                             </div>
                                     <div class="foto_wanita_cli" id="cwe-div-id1b" style="width:  50%">
@@ -2906,7 +2645,7 @@ var context = new AudioContext();
                                     </div>
                                     <img id="bx2-fun-img-id5" data-aos="zoom-in" class=""
                                         src="https://indoinvite.com/nikah/template/flowers-template/blue-flowers/BFL-Border2.png"
-                                        style="position: relative; width: 315px; z-index: 1; margin: 0 auto !important; margin-top: -290px !important;"
+                                        style="position: relative;width: 340px;z-index: 1;margin: 0 auto !important;margin-top: -315px !important;"
                                         alt="">
                                     <br>
                                 </div>
@@ -2918,7 +2657,7 @@ var context = new AudioContext();
                                     <p data-aos="fade-up" id="ac1-p-id1" class="map_id2" style="color: #005189 !important; font-size: 15px;">Minggu, 06 April 2025</p>
                                                                             <p class="custom_time1" data-aos="fade-up" id="ac1-p-id2" style="color: #005189 !important; font-size: 15px;"> Pukul 10:00 WITA
                                         Sampai Selesai</p>
-                                                                        <p data-aos="fade-up" id="ac1-p-id3" style="color: #005189 !important; font-size: 15px;">Lorong Bettu, Desa Dampang</p>
+                                                                        <p data-aos="fade-up" id="ac1-p-id3" style="color: #005189 !important; font-size: 15px;">Jl. Puyu, Kel. Caile, Kec. Ujung Bulu, Kab. Bulukumba</p>
                                                                     </div>
 
                                 <br>
@@ -2938,28 +2677,12 @@ var context = new AudioContext();
                                 </div>
                                 <br>
                                 <br>
-                                <div id="id_open_kado"></div>
-                                <div data-aos="fade-up" id="map_id" class="embed_map_cli">
-
-		<!--MAPS-->
-		<div class="">
-			<iframe src="https://www.google.com/maps/embed?pb=!4v1742899879241!6m8!1m7!1sg1gOsGziw7nuO5kETUGr0A!2m2!1d-5.49296516707528!2d120.1263716937335!3f227.08456630190594!4f-12.952148558892915!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		</div>
-
-		<br>
-		
-		<!-- MAPS -->
-
-    </div>
     
 
 
 
 
                             </div>
-                            <div id="fun-div-id44" style="height: 50px;"></div>
-                            
-                            <br>
                         </div>
                         <br>
                         <br>
@@ -3017,13 +2740,15 @@ var context = new AudioContext();
                         </div>
                         <div class="rek_kiri">
                             <img style="margin-left: 0px !important;" class="pin_rek" src="https://indoinvite.com/nikah/bank/pin.png" alt="">
-                            <p class="rek_norek">176 000 134 1112</p>
+                            <p class="rek_norek">1760001341112</p>
                             <p class="rek_an font-p">Sukirman Fajar M</p>
                             <p class="rek_ket font-p"></p>
                         </div>
-                        <div class="rek_kanan">
-                            <button class="btn btn-primary rek_copy font-p"
-                            data-rek="176 000 134 1112"><i class="icon-copy"></i> Copy</button>
+                        <div class="rek_kanan flex justify-end">
+                            <button class="btn btn-primary rek_copy font-p flex items-center justify-center gap-2"
+                            data-rek="1760001341112"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+</svg> Copy</button>
                         </div>
                     </div>
 
@@ -3035,13 +2760,15 @@ var context = new AudioContext();
                         </div>
                         <div class="rek_kiri">
                             <img style="margin-left: 0px !important;" class="pin_rek" src="https://indoinvite.com/nikah/bank/pin.png" alt="">
-                            <p class="rek_norek">0403 0104 3285 504</p>
+                            <p class="rek_norek">040301043285504</p>
                             <p class="rek_an font-p">Nur Islah</p>
                             <p class="rek_ket font-p"></p>
                         </div>
-                        <div class="rek_kanan">
-                            <button class="btn btn-primary rek_copy font-p"
-                            data-rek="0403 0104 3285 504"><i class="icon-copy"></i> Copy</button>
+                        <div class="rek_kanan flex justify-end">
+                            <button class="btn btn-primary rek_copy font-p flex items-center justify-center gap-2"
+                            data-rek="040301043285504"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+</svg> Copy</button>
                         </div>
                     </div>
 
@@ -3052,13 +2779,8 @@ var context = new AudioContext();
     
 
     
-                    <div style="height: 20px"></div>
-        <div style="padding: 15px 20px; text-align: center;margin: 10px 20px;background-color: #fff;border-radius: 5px;box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);">
-            <img style="    margin: 0 auto;" src="https://indoinvite.com/kado-c.gif" alt="">
-            <p style="    font-size: 11px !important;line-height: 12px; color: #000 !important;">Klik tombol dibawah untuk titip kado fisik ke acara:</p>
-            <button id="tombol-kado-2-nde" style="    background-color: #94deff;padding: 5px 15px;margin-top: 5px;font-size: 14px;border-radius: 3px;color: #000;" onclick="openShop()"> <img style="width: 20px;     float: left;margin-right: 10px !important;" src="https://indoinvite.com/gift-icon.png" alt=""> Pilih Kado Fisik</button>
-        </div>
-        <div style="clear: both"></div>
+
+        
                 
 
 
@@ -3067,16 +2789,8 @@ var context = new AudioContext();
 
                         </div>
                         <br>
-                        <div id="fun-div-id50" data-aos="zoom-in" class="black-box pengumuman_cli pengumuman_gr"
-                            style="color: #005189 !important; font-size: 13px; width: 100%; margin: 0 auto; margin-top: 30px;">
-                            
-                        </div>
-                        <br>
+                        
                     </div>
-                    <div id="fun-div-id51" style="height: 50px;"></div>
-                    
-                    <br>
-                    <br>
                 </div>
                 <br>
                 <br>
@@ -3085,75 +2799,7 @@ var context = new AudioContext();
         </div>
     
 
-    <div class="ucapan kehadiran_cli" id="beri_ucapan" style="background-image: url('https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/every-moment/bgs.jpeg');">
-        <div class="form-ucapan" style="    margin-bottom: 100px;">
-
-            <div class="fh5co-heading">
-
-                <h2 style="text-align: center; margin-top: 30px" id="kehadian_text">Kehadiran</h2>
-
-
-            <p id="notifPopupFill" class="alert alert-success px-0 py-0 m-3" style="font-size: 12px; display: none; background-color: #feffce !important; color: #393939 !important;">Your attendance form has been successfully submitted. <br> <a class="underline cursor-pointer" onclick="resetKehadiran()">Reset</a></p>
-
-            <form id="push_ucapan" class="submit_ucapan" action="https://indoinvite.com/ucapan/store">
-                <input type="hidden" name="_token" value="BjTxb7fqObvsqtypJCNXjNM9C1WFwP7j2Gr1fWLm">                <input type="hidden" name="pernikahan_id" value="812669">
-                <div class="form-group col-md-12 font-p" style="background-color: #fff">
-                    <label class="form-label hadir_nama">Nama</label>
-                    <input maxlength="20" required name="nama" id="konfir_nama_2" class="form-control form-fun">
-                </div>
-                
-
-            
-            
-                            <div id="div-id-ucapan" class="form-group col-md-12 font-p" style="background-color: transparan">
-                    <label class="form-label hadir_ucapan">Ucapan</label>
-                    <textarea name="ucapan" class="form-control form-fun" id="ucapan_2" style="height: 100px !important"></textarea>
-                </div>
-            
-                            <div class="form-group col-md-12 font-p" id="filed_kehadiran" style="background-color: transparan">
-                    <label class="form-label hadir_hadir">Kehadiran</label>
-                    <select required class="form-control form-fun" name="ket_hadir" id="hadir_id">
-                        <option value="" selected>Option</option>
-                        <option class="val_nohadir" value="0">Tidak Hadir</option>
-                        <option class="val_hadir" value="1">Hadir</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-12" style="background-color: transparan" id="wa3">
-                    <label class="form-label hasir_jumlah font-p">Jumlah Orang yang Hadir</label>
-                    <select style="  color: #000 !important;" class="form-control form-fun" name="jumlah" id="jumlah_datang_id">
-                                                            <option value="0">0 Orang</option>
-                                                            <option value="1">1 Orang</option>
-                                                            <option value="2">2 Orang</option>
-                                                            <option value="3">3 Orang</option>
-                                                            <option value="4">4 Orang</option>
-                                                            <option value="5">5 Orang</option>
-                                                            <option value="6">6 Orang</option>
-                                                            <option value="7">7 Orang</option>
-                                                            <option value="8">8 Orang</option>
-                                                            <option value="9">9 Orang</option>
-                                                            <option value="10">10 Orang</option>
-                                                </select>
-                    <span style="font-size: 9px;color: #ff0404;" id="alert_data_ucapan"></span>
-                </div>
-            
-
-                
-
-                    <button type="submit" id="tombol_kirim_2" style="margin: 0 20px; padding: 10px 30px;margin-right: 15px;border-radius: 6px;" class="btn btn-primary font-p">Kirim</button>
-                                                                <a class="btn" style="height: 45px;padding: 6px;" onclick="openGiftModal()"><img style="width: 30px" src="https://indoinvite.com/icon/ttk2.png"></a>
-                                        
-            </form>
-
-        </div>
-
-        </div>
-
-        <div style="display:block"></div>
-
-                <div class="box-ucapan font-p" id="box_ucapan" style="background-color: #fff; text-align: left">
-
-        </div>
-            </div>
+    
 
 
 
@@ -3168,37 +2814,136 @@ var context = new AudioContext();
             </div>
         </div>
 
+
+<div class="relative w-full overflow-hidden mt-6" id="slider-container">
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7VZ__U_pN_twveQ9RzGZ-_b5mgQQlKTtI7qyyutEi8yJAF0rWjjhzleXzarn0IvkQ9x7OuA-uP-hjsrDyLFHH2l7YtC7qQVXxcxtDEawwHW4nixNCRwFQD_K_Es7IeCqkO3z7SqcwFEd4MqQwJ9Y-JjVE39k4FSPxTU2nXvN_tUKB936YGOAg0OT8boPM/s4342/SON_0469.webp" class="w-full">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmWricBG96aSYbRPGLsL3JsDcZAJuVAlmLT6k0gPmePwBXoj3UcCQjprD838BtYUDMDfNaMwSjc1-ozje4RvaZn3qseV_znIRkWN4pQD9B6ymo-WMwCDytN2fiZh4s0IYl9D_N3s6hbwDGDrVqpeb4fk89DD_L4bcGazkFyprwGSeBiyGeyE4lWBb8j8FK/s4496/SON_0466.webp" class="w-full">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZJQjBTGGCZEv13r62Flp4cLYAEu2LqKQM6zcjj6lvWucpUd_R6g_IO8xrUtbSQPA7XOf0dgbQwA2gR8wrEymmNaKtCS5EJYb1ruxldpwy-p3eCfvFYw8Vuh750Q-7FRdYxWgBwsnOwLWVV5gPgRGAvJlXF2saGAzWyp7k6j_VZyGaf-J8saZN5ruJxZDw/s4232/SON_0496.webp" class="w-full">
+            </div>
+            <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-xl">◀</button>
+            <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-xl">▶</button>
+        </div>
+        <div class="flex justify-center mt-4" id="dots"></div>
+    
+    <script>
+        const slider = document.getElementById('slider');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        const dotsContainer = document.getElementById('dots');
+        const sliderContainer = document.getElementById('slider-container');
+        let index = 0;
+        let autoSlideInterval;
+
+        function updateSlider() {
+            const width = slider.clientWidth;
+            slider.style.transform = `translateX(-${index * width}px)`;
+            updateDots();
+        }
+
+        function updateDots() {
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active-dot', i === index);
+            });
+        }
+
+        function createDots() {
+            for (let i = 0; i < slider.children.length; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => {
+                    index = i;
+                    updateSlider();
+                });
+                dotsContainer.appendChild(dot);
+            }
+            updateDots();
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slider.children.length;
+            updateSlider();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 3000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % slider.children.length;
+            updateSlider();
+        });
+
+        prev.addEventListener('click', () => {
+            index = (index - 1 + slider.children.length) % slider.children.length;
+            updateSlider();
+        });
+
+        let touchStartX = 0;
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+        
+        slider.addEventListener('touchend', (e) => {
+            let touchEndX = e.changedTouches[0].clientX;
+            if (touchStartX - touchEndX > 50) {
+                index = (index + 1) % slider.children.length;
+            } else if (touchEndX - touchStartX > 50) {
+                index = (index - 1 + slider.children.length) % slider.children.length;
+            }
+            updateSlider();
+        });
+
+        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+        createDots();
+        startAutoSlide();
+    </script>
+        
+
         
         
 
 
-        <div class="gallery-grid" id="galleryGrid" data-aos="fade-up">            
+        <div class="gallery-grid grid grid-cols-2 gap-4 mt-6" id="galleryGrid" data-aos="fade-up">            
         
         
-                                    <a class="gallery-item" 
-                href="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_08126691742897051.webp"
-                data-aos="fade-right"
-                data-aos-duration="1000">
-                            <img alt="Swipe Up To Close" 
-                    src="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_08126691742897051.webp"  
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1Pcbllzx8I7bwU_hi6toGn5svQCdqLusKJkWJtovIOhXJhrKFtHV-U2fke8ktVq3QpxzJ2cql8FAXGoTyVJGf4p3sHB5BkyOz8PYzMnWjmkdwq5KZY2VaBVCmNIN1Pd2z0KePUZLxT_381uS_sE04MOltMGh5Dr_ElPi2nMEqdIC06P9kVuGFK8xEGG8x/s400/SON_0519.webp"  
                     loading="lazy" />
-            </a>
-                                    <a class="gallery-item" 
-                href="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_18126691742897052.webp"
-                data-aos="fade-left"
-                data-aos-duration="1000">
-                            <img alt="Swipe Up To Close" 
-                    src="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_18126691742897052.webp"  
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2E1gCp4QV4uEqHMiHrPeYu1ga3jSznJMafWDGXOSgk1VY6pUSaSKoP_8jQ8Vzg0JAxQm6fP76vkvXj6k14kTRU3wAT1j5etY9VU37Sb4AzW5oMhN-lgPJFiZuU6tlZ0RhHfX20YGvNeU7IfJyguBw8qRMiv55QKrVBC7KcAbg4YvJ9dfyLdEDNugzCTjl/s400/SON_0532.webp"  
                     loading="lazy" />
-            </a>
-                                    <a class="gallery-item" 
-                href="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_28126691742897053.webp"
-                data-aos="fade-right"
-                data-aos-duration="1000">
-                            <img alt="Swipe Up To Close" 
-                    src="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/galery_28126691742897053.webp"  
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCfU7N14ZPanuoNn0_cJobxIekDQoso7rcjasD9BvWZJpMuQTeTCe_DoakYQ4R_jpRcgj2vus02l4N660H38lrfD1iZNDT6_LmwzMGXR1qCm6r1t9svY9Td0e_gtJWIM0LgCxuGG73WXYLHlgZcTfTvc-jEQ6o8OAqvi1ZRWCgAEImmfQYcDViCJQ6nhRk/s400/SON_0510.webp"  
                     loading="lazy" />
-            </a>
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjk9lS1NjNC3LomGzGVax6VVPbEDiw1rCcc7GeKOesImIsvDbWVrkb-LyCM7vmQQDtYEdvPL1JoWLldn6hmDEzd56iJf-CWTcM0v-mY1OhSux7j3pXFz_PrNCm1vxgemt1fpSUlMsl6sZofoGHWpL-UAkDxb3zDMu45uWvNQMyZTN0_zkpuSK7CgiDv1xBZ/s400/SON_0471.webp"  
+                    loading="lazy" />
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1mPW0XZmKfGx_csHsIqh4-2vHaFCag8VcpB7VJrpk9mbyFpagIUIhghobfMvi6U2VfxI9HIjOV3UDYrLIV0gFO7efybHMPw7X_A4pEH_LZze2oiSC03vCj23mFgna_vMD0kxug6XcU495m3JJM9IFKJTYAeVirFMd_eAp9HqI42a_rUtSZKmRZrt9Ensy/s400/SON_0469.webp"  
+                    loading="lazy" />
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBVcqViZtiwHwfkooGAw2VfccIe3jzhMGrNoLp424yt4MMCq6NxE4K82YqUW3TpBNSXLGrri5ORsn4zIU0rzOscRElpxk86Op4VbzZ6cczIyzdI2TBl7foFg_jic-drxVfAB4um2qvOo5uVOOyX7-DYsWD2C7UhjPo6ng8LewyTHx9A8COdqOsNWiH5njU/s400/SON_0492.webp"  
+                    loading="lazy" />
+
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHM2VMb_JbgeDTxmXeHTzw-QZiZ41-6sVrDoiEmubSy6j3XWpb_DsqS4x2tEESM2kzZCQJyOp5FObAsOzbesfn_jnQouYZ26ZpiAl6fD02qoLakBKeP8Z3-Tm7fuZuPBJkVovIi6GYVZeN7MYgtmArZnAyqKgz2tvbK8Y3vL7Z1xfvQiz7IVk-5cdjrX1b/s400/SON_0485.webp"  
+                    loading="lazy" />
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiENb85tVXSA2W-gu_CHgKRqvq7oKJAmLGNcU4rZXozXy_w9KhtM_tP17WH05iRKtaPTnHTU4LitGirqckT1-O4gJy88kkPTWwMuZ5ESWczBju70yUYBs-uwwplYzTEz58mPNCHDtYL0mBVwpsiOZVrKg_K0wpxFtDEx0pezgLeV03Py88GO1q-HKYTTqmZ/s400/SON_0476.webp"  
+                    loading="lazy" />
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjw8CEx7l-jtFcZN9ZiOpeliN5JwBNflnscKfu_ia72SYZb2lL8PUTBZ1hP_0TXjsUzj3iwKeEABVNHIFTB_xBhO8k1ZnSPCIjsBF8k4GvrJ6Lx5uwQBgCYJTrsRU-9sORP7KK707dBFSQZXCnkVwNYUTrKJQUPsZcPm6axbsLY2mE2K2fpj-FLZcppy8eq/s400/SON_0496.webp"  
+                    loading="lazy" />
+                                    <img alt="Swipe Up To Close" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8SmUTMzWRPEupbHua2ccEbA_ahFhbqI6rNRQ-bO4w_fBo7bk-sU2f-Yp-IVg8rYeLCHFxGhg3ZlQpSd6drPYvvKizpnlkYdW_E_30nseMEHA76epC1GP9JWU9xLgB0ljktbY8ry2Nj9laFIScciwfdMUqcJmM9-hjUe9bRDCtmgwLBGkXA89wbM7TzW0p/s400/SON_0480.webp"  
+                    loading="lazy" />
                 </div>
     </div>
 </div>
@@ -3229,7 +2974,7 @@ var context = new AudioContext();
                         </div>
                         <img id="bx2-fun-img-id5" data-aos="zoom-in" class=""
                             src="https://indoinvite.com/nikah/template/flowers-template/blue-flowers/BFL-Border2.png"
-                            style="position: relative; width: 315px; z-index: 1; margin: 0 auto !important; margin-top: -290px !important;"
+                            style="position: relative;width: 340px;z-index: 1;margin: 0 auto !important;margin-top: -315px !important;"
                             alt="">
                         <br>
                     </div>
@@ -3246,141 +2991,6 @@ var context = new AudioContext();
             </div>
         </div>
     </div>
-    
-
-    <footer id="fh5co-footer" role="contentinfo">
-        <div id="fun-div-id52" class="container">
-            <!-- Modal -->
-  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
-   <div class="modal-dialog" role="document">
-     <div class="modal-content">
-       <!--<div class="modal-header">-->
-       <!--  <h5 class="modal-title" id="exampleModalLabel">Beri Hadiah</h5>-->
-       <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-           <!--<span aria-hidden="true">&times;</span>-->
-       <!--  </button>-->
-       <!--</div>-->
-       <div class="modal-body">
-           <div>
-                 <h4 style="text-align: center;">Konfirmasi Kehadiran Ke Mempelai</h4>
-                 <br>
-                 <img src="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/sampul_8126691742896479.jpeg" alt="groom" class="img-responsive" style="border-radius: 50%;width: 125px;margin: 0 auto;">
-                 <form method="POST" action="" id="form-konfir">
-                     <input type="hidden" name="_token" value="BjTxb7fqObvsqtypJCNXjNM9C1WFwP7j2Gr1fWLm">                    <div class="form-group col-md-12">
-                        <label>Nama</label>
-                        <input required name="nama" id="konfir_nama" class="form-control">
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label>Nomor Whatsapp Aktif (Contoh: 087888333555)</label>
-                        <input type="number" required name="no_wa" id="konfir_wa" class="form-control">
-                        <div style="display:none" id="notif_wa">
-                            <p style="color:red !important">Nomor Wa Tidak Aktif!</p>
-                        </div>
-                        <div style="text-align: center; display:none" id="belumisi">
-                            <p style="color:red !important">Isi semua data!</p>
-                         </div>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label>Ucapan</label>
-                        <textarea name="ucapan" class="form-control" id="ucapan" style="height: 120px">Selamat atas pernikahannyaa...</textarea>
-                    </div>
-                 </form>
-                 <br>
-                 <button type="submit" id="tombol_kirim" onclick="konfir()" style="margin: 0 auto;width: 100%;" href="https://saweria.co/funeventorganiser" class="btn btn-primary" target="_BLANK">Saya Hadir</button>
-                 <div style="text-align: center; display:none" id="notif_kirim">
-                    <i>mengirim data . . .</i>
-                 </div>
-
-                 <br>
-                 <br>
-                 <p style="margin: 0 auto;text-align: center;" data-dismiss="modal" onclick="belum()">Belum Bisa Hadir</p>
-                 <br>
-
-         </div>
-       </div>
-       <!--<div class="modal-footer">-->
-       <!--  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-       <!--  <button type="button" class="btn btn-primary">Save changes</button>-->
-       <!--</div>-->
-     </div>
-   </div>
- </div>
-
-
- 
-
- <!--MODAL-->
-            <!-- Modal -->
- 
- <div class="modal fade" id="modal_protokol" style="z-index: 99;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
-   <div class="modal-dialog" role="document">
-     <div class="modal-content">
-       <!--<div class="modal-header">-->
-       <!--  <h5 class="modal-title" id="exampleModalLabel">Beri Hadiah</h5>-->
-       <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-           <!--<span aria-hidden="true">&times;</span>-->
-       <!--  </button>-->
-       <!--</div>-->
-       <div class="modal-body">
-           <div>
-                 <h4 style="text-align: center;">Mohon Patuhi Protokol Kesehatan</h4>
-                 <br>
-                 <img src="https://indoinvite.com/images/protokol.jpeg" alt="groom" class="img-responsive" style="width: 100%;margin: 0 auto;">
-
-                 <br>
-                 <button type="submit" data-dismiss="modal" onclick="closeModal('#modal_protokol')" style="margin: 0 auto;width: 100%;" href="https://saweria.co/funeventorganiser" class="btn btn-primary" target="_BLANK">Saya Mematuhi Protokol</button>
-
-                 <br>
-                 <br>
-
-
-         </div>
-       </div>
-       <!--<div class="modal-footer">-->
-       <!--  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-       <!--  <button type="button" class="btn btn-primary">Save changes</button>-->
-       <!--</div>-->
-     </div>
-   </div>
- </div>
-
-
- 
-
- <!--MODAL-->
-            <div class="row copyright">
-    <div class="col-md-12 text-center">
-                        
-            <div id="watermark-indo" class="watermark_footer_cli" style="padding: 50px 0 100px 0;flex-wrap:wrap;align-items:center;">
-        <div class="watermark-detail">
-                                    <div style="width: 100px; margin: 0 auto;">
-                    <div style="display: flex;width:100%;gap:10px;">
-                        <a id="ig-foot" href="https://instagram.com/indoinvite" target="_blank">
-                            <img src="https://indoinvite.com/nikah/ig.svg" style="width: 50px;" alt="">
-                        </a>
-                        <a id="tiktok-foot" href="https://www.tiktok.com/@indoinviteofficial/" target="_blank">
-                            <img src="https://indoinvite.com/nikah/tiktok_idnvt.webp" style="width: 42px; padding-top:4px; " alt="">
-                        </a>
-                    </div>
-                </div>
-                <div style="clear:both"></div>
-                <div style="width:100%;margin:10px auto;">
-                <a id="link-foot" style="color: #fff;background-color: #00458b;padding: 5px 20px;border-radius: 5px;" href="https://indoinvite.com">Indoinvite.com</a>
-                </div>
-            
-                </div>
-            </div>
-        </p>
-        <audio autoplay loop id="playAudio">
-                                    <source src="https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/theme/music/1659168655.mp4">
-                        </audio>
-                <audio autoplay  id="playAudioS">
-                    </audio>
-
-    </div>
-</div>
-        </div>
-    </footer>
     </div>
 
     
@@ -3395,126 +3005,6 @@ var context = new AudioContext();
     }
 
 </style>
-
-
-<div class="fix-menu bg-primary" id="menu_id" style="max-width: 500px; ">
-        <div>
-
-        <div class="flex justify-around grid-container cursor-pointer">
-
-
-            
-            
-            
-
-            
-
-
-            
-            <div id="icon1" class="item1" onclick="scrollToHome()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                        width: 20px;
-                        padding-top: 4px;
-                    " src="/nikah/home.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-
-            
-            <div id="icon2" class="item1" onclick="scrollToUcapan()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img id="menu-kehadiran-bawah" style="
-                        width: 25px;
-                        padding-top: 2px
-                    " src="/nikah/people.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-            
-                        <div id="icon3" class="item1" onclick="scrollToGalery()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                       width: 22px;
-                        padding-top: 4px;
-                    " src="/nikah/picture.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-            
-
-
-
-            
-            <div id="icon4" class="item1" onclick="scrollToMap()">
-                <div style="width: 100%;">
-                    <div style="
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                            width: 20px;
-                            padding-top: 4px;
-                    " src="/nikah/map.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-            
-                        
-
-
-
-            
-                        
-
-
-
-            
-            <div id="icon7" class="item1">
-                <div style="width: 100%;">
-                    <div id="volume" style="background-color: #4970ea;
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 3px; margin: 0 auto;">
-                        <img style="
-                        width: 25px;
-                            padding-top: 4px;
-                            padding-left: 2px;
-                    " src="/nikah/sound.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            
-
-            
-
-        
-        </div>
-    </div>
-</div>
 
         
     <!-- jQuery -->
