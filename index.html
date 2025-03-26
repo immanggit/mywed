@@ -2437,7 +2437,7 @@ var context = new AudioContext();
                 <p id="awal-fun-p-id1" style="color: #2276b1; font-size: 20px; text-shadow: 1px 1px 2px #2276b1;">
                     Kepada                </p>
                 <h4 style="color: #2276b1; font-size: 20px; text-shadow: 1px 1px 2px #2276b1;" id="kpdn" class="kpd">Yth. -</h4>
-                <button id="btn_open" class="button-black" style="margin: 0 auto;width: 60%;" type="button" class=""
+                <button id="btn_open" class="button-black" onclick="scrollToTop()" style="margin: 0 auto;width: 60%;" type="button" class=""
                     data-keyboard="false">
                     Buka Undangan                </button>
                 <img id="awal-fun-img-id5a" style="position: absolute; bottom: 0px; width: 100%; z-index:-1" class="" src="https://indoinvite.com/nikah/template/flowers-template/blue-flowers/BFL-Bawah.webp" alt="">
@@ -3027,6 +3027,10 @@ var context = new AudioContext();
 <script src="https://indoinvite.com/splide/js/splide.min.js"></script>
 
 <script>
+function scrollToTop() {
+        document.querySelector('#page').scrollIntoView({behavior: 'smooth'});
+    }
+
 function pushPurchase(location) {
     var paket = $('select[name="total"] option:selected').text();
     var kupon = $('input[name="kupon"]').val();
